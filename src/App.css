@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.reg-card {
+  margin-top: 100px;
+}
+
+p {
+  font-family: Lato !important;
+}
+
+.App-cover {
+  height: 100vh;
+  background: url('./assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+input {
+  font-family: Lato !important;
+}
+
+.btn-rounded {
+  border-radius: 30px !important;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
