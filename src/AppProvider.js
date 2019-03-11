@@ -46,7 +46,18 @@ export class MyProvider extends Component {
                 editContact: (id, contactObj) => {
                     let contacts = [...this.state.contacts.filter(contact => contact.id !== id), contactObj];
                     this.setState({contacts: contacts});
-                } 
+                },
+                fetchContacts: () => {
+                    let contacts = [];
+                    axios.get('http://127.0.0.1:8000/api/my_contacts', { headers: { Authorization: `Bearer ${this.state.accessToken}` } })
+                    .then(res => {
+                        contacts = res.data.contacts;
+                        this.setState({contacts: contacts});
+                    })
+                    this.setState({
+                        contacts: contacts,
+                    });
+                }
             }}>
                 {this.props.children}
             </MyContext.Provider>

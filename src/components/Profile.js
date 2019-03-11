@@ -9,7 +9,7 @@ class Profile extends Component {
         axios.get('http://127.0.0.1:8000/api/user', { headers: { Authorization: `Bearer ${this.props.accessToken}` } })
         .then(res => {
             this.setState(res.data);
-            console.log(this.state);
+            //console.log(this.state);
         })
         .catch(error => { console.log(error) });
     }

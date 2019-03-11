@@ -8,6 +8,7 @@ import Edit from './components/Edit';
 import Contacts from './components/contacts/Index';
 import AddContact from './components/contacts/Add';
 import EditContact from './components/contacts/Edit';
+import UploadContact from './components/contacts/Upload';
 import Logout from './components/Logout';
 import Error from './components/Error';
 import './App.css';
@@ -46,6 +47,7 @@ class App extends Component {
                 <PrivateRoute path="/edit" component={Edit} />
                 <PrivateRoute path="/addContact" component={AddContact} />
                 <PrivateRoute path="/editContact/:id" component={EditContact} />
+                <PrivateRoute path="/uploadContact" component={UploadContact} />
                 <Route to="/logout" component={Logout} />
                 <Route component={Error} />
               </Switch>

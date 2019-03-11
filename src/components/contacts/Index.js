@@ -32,6 +32,7 @@ class Contacts extends Component {
                             <div className="list-group-flush bg-white">
                                 <h5 className="p-3"><i className="fa fa-users"></i> Contact list 
                                     <Link to="addContact" className="btn btn-secondary mt-0 pull-right btn-sm btn-rounded"><i className="fa fa-user-plus"></i> Create</Link>
+                                    <Link to="uploadContact" className="btn btn-success mt-0 pull-right btn-sm btn-rounded"><i className="fa fa-cloud-upload"></i> Upload CSV</Link>
                                 </h5>
                                 <Consumer>
                                 {context => context.state.contacts.map((contact) => (
